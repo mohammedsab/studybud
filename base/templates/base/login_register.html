@@ -3,18 +3,25 @@
 
 {% block content %}
     <div>
-        <form action="" method="post">
-            {% csrf_token %}
-            <!-- {{form.as_p}} -->
+        <div>
+            <form action="" method="post">
+                {% csrf_token %}
+                <!-- {{form.as_p}} -->
+    
+                <label for="">Username:</label>
+                <input type="text" name="username" placeholder="Enter Username">
+    
+                <label for="">Password:</label>
+                <input type="password" name="password" placeholder="Enter Password">
+    
+                <input type="submit" value="Login">
+            </form>
+        </div>
 
-            <label for="">Username:</label>
-            <input type="text" name="username" placeholder="Enter Username">
+        <div>
+            Forget password
+        </div>
 
-            <label for="">Password:</label>
-            <input type="password" name="password" placeholder="Enter Password">
-
-            <input type="submit" value="Login">
-        </form>
     </div>
 {% endblock content %}
     
