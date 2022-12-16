@@ -1,0 +1,20 @@
+<style>
+    .nav_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+</style>
+
+<div class="nav_container">
+    <div>
+        <a href="/">LOGO</a>
+    </div>
+
+    <div>
+        <form action="{% url 'home' %}" method="get">
+            <input type="text" name="q" id="" placeholder="Search Rooms....">
+        </form>
+    </div>
+
+    <div><a href="{% url 'login' %}">Login</a></div>
+</div>
