@@ -33,7 +33,7 @@
                 
                 {% for room in rooms %}
                     
-                    {% if request.user.is_authenticated %}
+                    {% if request.user.is_authenticated and request.user == room.host %}
                         <a href="{% url 'updateRoom' room.id %}">edit</a>
                         <a href="{% url 'deleteRoom' room.id %}">Delete</a>
                     {% endif %}
