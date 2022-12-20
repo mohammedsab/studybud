@@ -21,7 +21,7 @@
     </div>
 
     <div>
-        <p>Hello {{ request.user.username }}</p>
+        <a href="{% url 'profile' user.id %}">{{ request.user.username }}</a>
     </div>
 
     <div>
